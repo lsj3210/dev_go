@@ -1,0 +1,19 @@
+http:
+  listen_port: 8082
+  run_mode: dev
+  access_log: logs/access.log
+
+grpc:
+  listen_port: 8082
+
+log:
+  file: logs/run.log
+  level: debug
+  format: text #text or json
+
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  pwd: root
+  db: openapi
