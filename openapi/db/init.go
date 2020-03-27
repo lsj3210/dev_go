@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"openapi/utils"
 	"time"
-	"ucenter/utils"
 )
 
 var db *gorm.DB

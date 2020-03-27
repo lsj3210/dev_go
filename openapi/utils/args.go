@@ -14,7 +14,7 @@ var (
 //命令行参数说明
 func _usage() {
 	fmt.Fprintf(os.Stderr, "user center version: v1.0.0\n"+
-		"Usage: ucenter [-c filename]\n\n"+
+		"Usage: openapi [-c filename]\n\n"+
 		"Options:\n")
 	flag.PrintDefaults()
 }
