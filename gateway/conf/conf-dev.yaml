@@ -1,0 +1,17 @@
+http:
+  listen_port: 8082
+  run_mode: dev
+  access_log: logs/access.log
+
+log:
+  file: logs/run.log
+  level: debug
+  format: text #text or json
+
+postgres:
+  host: 127.0.0.1
+  port: 5432
+  user: kong
+  password: kong
+  db: kadmin
+  show_sql: yes #yes or no
