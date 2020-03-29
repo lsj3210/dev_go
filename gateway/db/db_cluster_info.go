@@ -23,11 +23,11 @@ func (obj *ClusterInfo) Modify() error {
 }
 
 func (obj *ClusterInfo) QueryByID(_id *int64) error {
-	return db.Where(QueryID, *_id).First(obj).Error
+	return db.Table(obj.TableName()).Where(QueryID, *_id).First(obj).Error
 }
 
 func (obj *ClusterInfo) Del() error {
-	if err := db.Where(QueryID, &obj.ID).First(obj).Error; err != nil {
+	if err := db.Table(obj.TableName()).Where(QueryID, &obj.ID).First(obj).Error; err != nil {
 		return err
 	}
 	return db.Where(QueryID, &obj.ID).Delete(ClusterInfo{}).Error
