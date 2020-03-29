@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package pb.request;
+
+message Request {
+    repeated Item item = 1;
+    string sourceVersion = 2;
+    string deviceType = 3;
+    bool isWhite = 4;
+    string clientIp = 5;
+    string expBitMap = 6;
+
+}
+
+
+message Item {
+    repeated string Keys = 1;
+    string ItemType = 2;
+    int32 CandiType = 3;
+    string CandiTypeString = 4;
+    string RecReason = 5;
+}

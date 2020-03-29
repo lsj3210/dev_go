@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pb.response;
+
+// Resp 返回数据类型
+message Resp {
+    int32 code = 1; // 状态
+
+    string message = 2; // 表示状态信息
+
+    string data = 3;
+}

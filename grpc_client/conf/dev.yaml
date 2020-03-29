@@ -1,0 +1,3 @@
+server:
+  addr: "grpc-time-out.tjopenapi.corpautohome.com:8080"
+  func: "send" # send/list/record/route

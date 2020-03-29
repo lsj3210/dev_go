@@ -1,0 +1,19 @@
+server:
+  grpc_port: 8069
+  grpc_gateway_port: 8065
+  doc_gateway_port: 8064
+
+statics:
+  swagger_json_path: "statics/swagger"
+  swagger_ui_path: "statics/swagger-ui"
+
+log:
+  file: "logs/run.log"
+  level: "debug"
+
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  password: root
+  db_name: test

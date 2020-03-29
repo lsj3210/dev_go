@@ -1,0 +1,32 @@
+syntax = "proto3";
+package rpc;
+
+import "google/api/annotations.proto";
+
+service testService {
+    //发送信息
+    rpc Send(Req) returns (Resp){
+        option (google.api.http) = {
+            post: "/send"
+            body: "*"
+        };
+    };
+
+    //服务端流式RPC
+    rpc List(Req) returns (stream Resp) {};
+
+    //客户端流式RPC
+    rpc Record(stream Req) returns (Resp) {};
+
+    //双向流式RPC
+    rpc Route(stream Req) returns (stream Resp) {};
+}
+
+message Req {
+    string data = 1;
+}
+
+message Resp {
+    int32 code = 1;
+    string data = 2;
+}

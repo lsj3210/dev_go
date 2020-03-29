@@ -1,0 +1,3 @@
+server:
+  addr: "grpc-test-lijian-1010.auto.com:8080"
+  func: "route" # send/list/record/route

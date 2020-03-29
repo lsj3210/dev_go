@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pb.grpcserver;
+
+// for grpc-gateway
+import "google/api/annotations.proto";
+import "response.proto";
+import "request.proto";
+
+service Query {
+
+    rpc getResp(pb.request.Request) returns (pb.response.Resp) {
+        option (google.api.http) = {
+      post: "/api/v1/getResp"
+      body: "*"
+    };
+    }
+
+}
+
